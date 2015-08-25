@@ -1,12 +1,21 @@
 {
   "manifest_version": 2,
   "name": "Magic Double Click Word Selection",
-  "description": "Select two words when double click on space between them",
-  "version": "0.0.1",
+  "description": "Select two words when double click on space between them (like Firefox)",
+  "author": "Mikhail Kalashnik <splurov@gmail.com>",
+  "version": "0.0.2",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["logic.js"]
+      "js": ["content.js"]
     }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
   ]
 }
