@@ -34,6 +34,7 @@ if (!window[injectedKey]) {
             range.setStart(startNode, startOffset);
             range.setEnd(endNode, endOffset);
 
+            selection.removeAllRanges();
             selection.addRange(range);
         }
     });
